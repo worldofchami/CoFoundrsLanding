@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	* {
+		@apply font-sg-reg;
+	}
+
+	html {
+		background: #f5f5f5;
+	}
+
+	input::placeholder {
+		color: #c1c1c1;
+	}
+
+	@font-face {
+		font-family: "Benz Grotesk";
+		src: url("https://fonts.cdnfonts.com/s/85920/BenzGroteskHeavy-z8Vo1.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: "Space Grotesk Regular";
+		src: url("https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2") format("woff2");
+	}
+
+	@font-face {
+		font-family: "Space Grotesk Medium";
+		src: url("https://fonts.gstatic.com/s/spacegrotesk/v15/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMBBSSJLm2E.woff2") format("woff2");
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::marker, ::-webkit-details-marker {
+	display: none !important;
+}
+
+summary {
+	display: flex;
+}
+
+button {
+	cursor: pointer !important;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+:focus-visible {
+	outline: 0;
+}
