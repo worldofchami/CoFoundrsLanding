@@ -30,7 +30,7 @@ async function joinMailingList(email: string): Promise<DBResponse> {
 export default async function Page() {
 	return (
 		<>
-		<main className="w-full h-full flex bg-[#f5f5f5] max-lg:flex-col">
+		<main className="w-full h-full flex bg-[#f5f5f5] max-lg:flex-col max-lg:h-[80vh]">
 			<section className="w-1/2 h-full flex flex-col justify-center gap-y-4 px-8 max-lg:h-1/2 max-lg:w-full max-lg:px-4 max-lg:items-center max-lg:gap-y-6">
 				<h1 className="font-benz-grotesk text-4xl max-lg:text-3xl max-lg:text-center">
 					We'll be here soon!<br/>You know where to find us.

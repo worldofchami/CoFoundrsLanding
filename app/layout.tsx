@@ -5,7 +5,7 @@ export const metadata = {
     title: "CoFoundrs - The social networking app of the future",
     description: "Empowering South Africa's next generation of entrepreneurs.",
 	icons: {
-		icon: "/images/favicon.png"
+		icon: "favicon.png"
 	}
 };
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <link rel="icon" href="/images/favicon.png" sizes="any" />
+            <link rel="icon" href="favicon.png" sizes="any" />
             <body>
                 <main className="h-screen w-full">
 					<Toaster
