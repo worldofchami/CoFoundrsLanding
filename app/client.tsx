@@ -101,7 +101,7 @@ export function TileGalleryDraggable() {
         <div
             { ...events }
             ref={draggable}
-            className="w-full h-56 relative overflow-auto cursor-grab"
+            className="w-full h-56 relative overflow-x-auto overflow-y-hidden cursor-grab"
         >
 			<TileGallery>
 				{

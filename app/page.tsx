@@ -45,7 +45,7 @@ export default async function Page() {
 						Empowering South Africa's next generation of entrepreneurs.
 					</span>
 				</div>
-				<div className="w-full h-fit relative overflow-auto">
+				<div className="w-full h-fit relative">
 					<TileGalleryDraggable />
 				</div>
 			</section>
