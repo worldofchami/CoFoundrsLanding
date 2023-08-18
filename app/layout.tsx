@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata = {
@@ -13,7 +14,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body>
-                <main className="h-screen w-full">{children}</main>
+                <main className="h-screen w-full">
+					<Toaster
+						toastOptions={{ style: { background: "#f5f5f5" } }}
+					/>
+					{children}
+				</main>
             </body>
         </html>
     );
