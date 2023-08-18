@@ -73,6 +73,6 @@ input:-webkit-autofill{
     background: transparent !important;
 }
 
-.input__holder:has(input:invalid) {
+.input__holder:has(input:invalid:not(:focus)) {
 	@apply ring-1 ring-red-500 border-0;
 }
