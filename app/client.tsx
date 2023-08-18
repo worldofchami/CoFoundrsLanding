@@ -13,6 +13,7 @@ function Tile({ src }: { src: string }) {
 			<img
 				src={src}
 				alt="Image Tile"
+                draggable={false}
 				className="h-full w-full object-cover rounded-md cursor-grab"
 			/>
 		</div>
