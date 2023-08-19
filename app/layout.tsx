@@ -18,7 +18,7 @@ export default function RootLayout({
         <html lang="en">
             <link rel="icon" href="favicon.png" sizes="any" />
             <body>
-                <main className="h-screen w-full">
+                <main className="h-screen w-full max-lg:h-[100dvh]">
 					<Toaster
 						toastOptions={{ style: { background: "#f5f5f5" } }}
 					/>
