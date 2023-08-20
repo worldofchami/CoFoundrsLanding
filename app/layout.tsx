@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 export const metadata = {
-    title: "CoFoundrs - The social networking app of the future",
+    title: "CoFoundrs - The Social Networking Platform of the Future.",
     description: "Empowering South Africa's next generation of entrepreneurs.",
 	icons: {
 		icon: "favicon.png"
