@@ -98,12 +98,12 @@ export function TileGalleryDraggable() {
 
     return (
         <>
-        {/* <button
+        <button
             className={`w-8 h-8 absolute my-auto top-0 bottom-0 left-1 bg-[#ff5757] hover:opacity-[.85] rounded-full p-1 z-10 ${isAtStart() ? 'opacity-[.85]' : 'opacity-1'}`}
             onClick={handleScrollBack}
         >
             <img src="/icons/left.svg" alt="Scroll Back" />
-		</button> */}
+		</button>
         <div
             { ...events }
             ref={draggable}
@@ -117,12 +117,12 @@ export function TileGalleryDraggable() {
 				}
 			</TileGallery>
 		</div>
-        {/* <button
+        <button
             className={`w-8 h-8 absolute my-auto top-0 bottom-0 right-1 bg-[#ff5757] hover:opacity-[.85] rounded-full p-1 z-10 ${isAtEnd() ? 'opacity-[.85]' : 'opacity-1'}`}
             onClick={handleScrollForward}
         >
-			<img src="/icons/right.svg" alt="Scroll Forward" />
-		</button> */}
+			<img src="/icons/left.svg" alt="Scroll Forward" className="rotate-180" />
+		</button>
         </>
     )
 }
