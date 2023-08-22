@@ -78,7 +78,7 @@ input:-webkit-autofill{
 }
 
 @media screen and (max-width: 1023px) {
-	.preview.max-lg\:block {
+	.preview .max-lg\:block {
 		display: none !important;
 	}
 }
