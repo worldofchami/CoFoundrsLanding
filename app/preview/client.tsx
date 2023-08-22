@@ -21,10 +21,10 @@ export const PreviewPages = () => {
     }
 
     const forceStopScroll = (e: Event) => {
-        e.preventDefault();
-        e.stopPropagation();
+        // e.preventDefault();
+        // e.stopPropagation();
 
-        return false;
+        // return false;
     }
 
     useEffect(() => {
