@@ -173,7 +173,7 @@ export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: s
     return (
         <>
         {/* @ts-ignore */}
-        <form action="" method="POST" className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
+        <form action="" method="POST" className="flex flex-col items-center gap-y-4" onSubmit={handleSubmit}>
         <div className="w-full h-12 flex rounded-md input__holder bg-transparent border-[.5px] border-[#1d1d1d]">
 			<div className="w-8 h-full flex justify-end">
 				<Image
