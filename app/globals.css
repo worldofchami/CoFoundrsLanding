@@ -76,3 +76,9 @@ input:-webkit-autofill{
 .input__holder:has(input:invalid:not(:focus)) {
 	@apply ring-1 ring-red-500 border-0;
 }
+
+@media screen and (max-width: 1023px) {
+	.preview.max-lg:block {
+		display: none;
+	}
+}

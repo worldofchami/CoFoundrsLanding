@@ -42,7 +42,7 @@ export const PreviewPages = () => {
 
     return (
         <>
-        <main className="w-full h-fit flex flex-col gap-y-4">
+        <main className="w-full h-fit flex flex-col gap-y-4 preview">
             <section className="w-full h-screen flex max-lg:flex-col-reverse max-lg:h-[200vh] max-lg:items-center" ref={pageOne}>
                 <div className="w-fit h-full flex-shrink-0 relative max-lg:h-screen max-lg:w-full max-lg:flex max-lg:justify-center max-lg:bg-[#efefef]" ref={pageFour}>
                     <div
