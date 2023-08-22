@@ -130,8 +130,9 @@ export function TileGalleryDraggable() {
 export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: string) => Promise<DBResponse> }) {
     const [email, setEmail] = useState("");
 
-    const handleSubmit = async () => {
-        if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+    const handleSubmit = async (e: Event) => {
+            e.preventDefault();
+        // if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
             const { ok, message } = await toast.promise<DBResponse>(
                 joinMailingList(email),
                 {
@@ -156,11 +157,13 @@ export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: s
             else {
                 toast.error(message);
             }
-        }
 
-        else {
-            toast.error("Please enter a valid email!");
-        }
+            return;
+        // }
+
+        // else {
+        //     toast.error("Please enter a valid email!");
+        // }
     }
 
     const handleChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
@@ -169,6 +172,8 @@ export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: s
 
     return (
         <>
+        {/* @ts-ignore */}
+        <form action="" method="POST" className="flex flex-col gap-y-4" onSubmit={handleSubmit}>
         <div className="w-full h-12 flex rounded-md input__holder bg-transparent border-[.5px] border-[#1d1d1d]">
 			<div className="w-8 h-full flex justify-end">
 				<Image
@@ -191,10 +196,11 @@ export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: s
 		</div>
 		<button
 			className="w-fit h-fit rounded-md border-[.5px] border-[#1d1d1d] px-4 py-2 bg-[#dedede] hover:bg-[#f5f5f5]"
-            onClick={handleSubmit}
+            type="submit"
 		>
 			Be Notified
 		</button>
+       </form>
         </>
     )
 }
