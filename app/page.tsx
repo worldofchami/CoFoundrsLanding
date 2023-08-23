@@ -46,9 +46,12 @@ export default async function Page() {
 			<section className="w-1/2 h-full flex flex-col justify-center gap-y-4 px-8 max-lg:h-1/2 max-lg:w-full max-lg:px-4 max-lg:justify-start max-lg:items-center">
 				<div className="flex flex-col">
 					<h1 className="font-benz-grotesk text-8xl text-[#ff5757] max-lg:text-5xl max-lg:text-center">CoFoundrs</h1>
-					<span className="pl-2 font-sg-med max-lg:text-sm max-lg:text-center">
+					<span className="pl-2 font-sg-med mb-2 max-lg:text-sm max-lg:text-center">
 						A social networking platform focused on
 						connecting South Africa's next generation of entrepreneurs.
+					</span>
+					<span className="text-[#909090] pl-2 text-xs text-center">
+						Founded by <Link href="https://github.com/worldofchami/" className="underline" target="_blank">Tino Chaminuka</Link> and <Link href="https://github.com/MuchiniGun/" className="underline" target="_blank">Owen Muchini</Link>.
 					</span>
 				</div>
 				<div className="w-full h-fit relative">
