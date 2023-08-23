@@ -50,7 +50,7 @@ export default async function Page() {
 						A social networking platform focused on
 						connecting South Africa's next generation of entrepreneurs.
 					</span>
-					<span className="text-[#909090] pl-2 text-xs text-center">
+					<span className="text-[#909090] pl-2 text-xs max-lg:text-center">
 						Founded by <Link href="https://github.com/worldofchami/" className="underline" target="_blank">Tino Chaminuka</Link> and <Link href="https://github.com/MuchiniGun/" className="underline" target="_blank">Owen Muchini</Link>.
 					</span>
 				</div>
