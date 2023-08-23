@@ -13,7 +13,7 @@ export default async function Page() {
 				<span className="font-light text-sm pl-2 text-[#909090]">
 					<Link href="/preview" className="underline hover:text-[#1d1d1d]">A Little Preview</Link>
 					&nbsp;|&nbsp;
-					<Link href="mailto:tinochaminuka@gmail.com" className="underline hover:text-[#1d1d1d]">Contact Us</Link>
+					<a href="mailto:tinochaminuka@gmail.com" className="underline hover:text-[#1d1d1d]">Contact Us</a>
 				</span>
 				<OnboardingForm />
 				<div className="w-fit h-9 flex gap-x-2">
@@ -26,7 +26,7 @@ export default async function Page() {
 							className="hover:opacity-[.85] hover:scale-105"
 						/>
 					</Link>
-					<Link href="mailto:tinochaminuka@gmail.com" target="_blank">
+					<a href="mailto:tinochaminuka@gmail.com" target="_blank">
 						<Image 
 							src="/icons/mail_clr.svg"
 							alt="Email Us"
@@ -34,7 +34,7 @@ export default async function Page() {
 							height={36}
 							className="hover:opacity-[.85] hover:scale-105"
 						/>
-					</Link>
+					</a>
 				</div>
 			</section>
 			<section className="w-1/2 h-full flex flex-col justify-center gap-y-4 px-8 max-lg:h-1/2 max-lg:w-full max-lg:px-4 max-lg:justify-start max-lg:items-center">
