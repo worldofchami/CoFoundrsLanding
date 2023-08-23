@@ -119,9 +119,8 @@ export const PreviewPages = () => {
                     </div>
                     <h1 className="text-4xl font-benz-grotesk mb-4">Events</h1>
                     <p className="text-sm leading-loose max-lg:text-center">
-                        Connect with members from all your communities in one place!
-                        <br/>A tailored experience, just for you, featuring only posts from communities you're a part of.
-                        <br/>Grow closer to those in your community and get to know them by leaving replies on their posts.
+                        View events you might be interested in that are taking place near you.
+                        <br/>You'll have the ability to set a reminder and be notified closer to the date.
                     </p>
                     <div
                         onClick={() => handleClickToScroll(pageThree)}
@@ -166,9 +165,8 @@ export const PreviewPages = () => {
                     </div>
                     <h1 className="text-4xl font-benz-grotesk mb-4">Communities</h1>
                     <p className="text-sm leading-loose max-lg:text-center">
-                        Connect with members from all your communities in one place!
-                        <br/>A tailored experience, just for you, featuring only posts from communities you're a part of.
-                        <br/>Grow closer to those in your community and get to know them by leaving replies on their posts.
+                        Join communities and keep up to date with fellow entrepreneurs and likeminded individuals!
+                        <br/>You'll have the opportunity to create posts to share the latest updates on your life, or business pursuits.
                     </p>
                     <div
                         onClick={() => handleClickToScroll(pageEight)}
