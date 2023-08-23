@@ -1,10 +1,10 @@
 "use client"
 
 import Image from "next/image";
-import { ChangeEvent, MutableRefObject, PropsWithChildren, useEffect, useRef, useState } from "react";
+import { MutableRefObject, PropsWithChildren, useEffect, useRef, useState } from "react";
 import { toast } from "react-hot-toast";
 import { useDraggable } from "react-use-draggable-scroll";
-import { DBResponse } from "./(util)/interfaces";
+import { submitForm } from "./(util)/actions";
 
 function Tile({ src }: { src: string }) {
 	return (
@@ -127,80 +127,51 @@ export function TileGalleryDraggable() {
     )
 }
 
-export function OnboardingForm({ joinMailingList }: { joinMailingList: (email: string) => Promise<DBResponse> }) {
-    const [email, setEmail] = useState("");
+export function OnboardingForm() {
+	async function submit(formData: FormData) {
+        const loadingToast = toast.loading("Joining...");
 
-    const handleSubmit = async (e: Event) => {
-            e.preventDefault();
-        // if(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-            const { ok, message } = await toast.promise<DBResponse>(
-                joinMailingList(email),
-                {
-                    loading: "Joining...",
-                    error: "Error - Please contact support!",
-                    success: ""
-                },
-                {
-                    success: {
-                        style: {
-                            display: "none"
-                        }
-                    }
-                }
-            );
-    
-            if(ok) {
-                toast.success(message);
-                setEmail("");
-            }
-    
-            else {
-                toast.error(message);
-            }
+        const { ok, message } = await submitForm(formData);
 
-            return;
-        // }
+        toast.remove(loadingToast);
 
-        // else {
-        //     toast.error("Please enter a valid email!");
-        // }
-    }
+        if(ok) {
+            toast.success(message);
+        }
 
-    const handleChange = ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
-        setEmail(value);
-    }
+        else {
+            toast.error(message);
+        }
+	}
 
     return (
         <>
-        {/* @ts-ignore */}
-        <form action="" method="POST" className="w-full flex flex-col max-lg:items-center gap-y-4" onSubmit={handleSubmit}>
-        <div className="w-full h-12 flex rounded-md input__holder bg-transparent border-[.5px] border-[#1d1d1d]">
-			<div className="w-8 h-full flex justify-end">
-				<Image
-					src="/icons/mail.svg"
-					alt="Join Our Mailing List"
-					width={20}
-					height={12}
+        <form action={submit} className="w-full flex flex-col max-lg:items-center gap-y-4">
+        	<div className="w-full h-12 flex rounded-md input__holder bg-transparent border-[.5px] border-[#1d1d1d]">
+				<div className="w-8 h-full flex justify-end">
+					<Image
+						src="/icons/mail.svg"
+						alt="Join Our Mailing List"
+						width={20}
+						height={12}
+					/>
+				</div>
+				<input
+					type="email"
+					name="email"
+					className="w-full font-sg-reg px-4 py-2 bg-transparent"
+					placeholder="johndoe@gmail.com"
+					autoComplete="on"
+        	        autoFocus
 				/>
 			</div>
-			<input
-				type="email"
-				name="email"
-				className="w-full font-sg-reg px-4 py-2 bg-transparent"
-				placeholder="johndoe@gmail.com"
-				autoComplete="on"
-                value={email}
-                onChange={handleChange}
-                autoFocus
-			/>
-		</div>
-		<button
-			className="w-fit h-fit rounded-md border-[.5px] border-[#1d1d1d] px-4 py-2 bg-[#dedede] hover:bg-[#f5f5f5]"
-            type="submit"
-		>
-			Be Notified
-		</button>
-       </form>
+            <button
+				className="w-fit h-fit rounded-md border-[.5px] border-[#1d1d1d] px-4 py-2 bg-[#dedede] hover:bg-[#f5f5f5]"
+        	    type="submit"
+			>
+				Be Notified
+			</button>
+       	</form>
         </>
     )
 }

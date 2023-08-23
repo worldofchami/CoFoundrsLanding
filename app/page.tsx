@@ -1,32 +1,5 @@
-import { createServerActionClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 import Link from "next/link";
-import { DBResponse } from "./(util)/interfaces";
 import { OnboardingForm, TileGalleryDraggable } from "./client";
-
-async function joinMailingList(email: string): Promise<DBResponse> {
-	"use server"
-
-	const supabase = createServerActionClient({ cookies });
-
-	const { error } = await supabase
-		.from("mailing_list")
-		.upsert({
-			email
-		});
-
-	if(error) {
-		return {
-			ok: false,
-			message: "Error joining our mailing list. Please contact support!"
-		}
-	}
-	
-	return {
-		ok: true,
-		message: "Thanks for joining! We'll keep you notified of any news."
-	}
-}
 
 export default async function Page() {
 	return (
@@ -41,7 +14,7 @@ export default async function Page() {
 					{/* &nbsp;|&nbsp;
 					<Link href="/preview" className="underline hover:text-[#1d1d1d]">Contact Us</Link> */}
 				</span>
-				<OnboardingForm joinMailingList={joinMailingList} />
+				<OnboardingForm />
 			</section>
 			<section className="w-1/2 h-full flex flex-col justify-center gap-y-4 px-8 max-lg:h-1/2 max-lg:w-full max-lg:px-4 max-lg:justify-start max-lg:items-center">
 				<div className="flex flex-col">
