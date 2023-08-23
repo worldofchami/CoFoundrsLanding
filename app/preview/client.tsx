@@ -52,7 +52,7 @@ export const PreviewPages = () => {
                         <img src="/icons/up.svg" alt="Next Section" />
                     </div>
                     <img
-                        src="/screens/feed.svg"
+                        src="/screens/feed_lr.jpeg"
                         alt="Feed Tab (Home Screen)"
                         className="h-full"
                     />
@@ -93,8 +93,8 @@ export const PreviewPages = () => {
                         <img src="/icons/up.svg" alt="Next Section" />
                     </div>
                     <img
-                        src="/screens/events.svg"
-                        alt="Feed Tab (Home Screen)"
+                        src="/screens/events_lr.jpeg"
+                        alt="Events Tab"
                         className="h-full"
                     />
                     <div
@@ -145,8 +145,8 @@ export const PreviewPages = () => {
                         <img src="/icons/up.svg" alt="Previous Section" />
                     </div>
                     <img
-                        src="/screens/communities.svg"
-                        alt="Feed Tab (Home Screen)"
+                        src="/screens/communities_lr.jpeg"
+                        alt="Communities Tab"
                         className="h-full"
                     />
                 </div>
